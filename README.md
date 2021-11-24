@@ -4,7 +4,7 @@
 
 
 
-## [Script Description][https://www.youtube.com/watch?v=rtnnaFM-LWg](#)
+## [Script Description](#) [[https://www.youtube.com/watch?v=rtnnaFM-LWg]
 
 - **Unencrypted Story View Botter** is a helpful tool that allows thousands of people to watch your posts. 
 - **It is completely free, source is visible for anyone to modify**
