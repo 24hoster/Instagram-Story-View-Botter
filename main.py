@@ -13,31 +13,34 @@ import random
 # Menu Logo & Presence! Classic animation, Chromeoptions etc  #
 os.system('cls')
 os.system("mode con cols=50 lines=30")
-os.system('title Type Username to Boost:')
 rpc = Presence("887882999151083560")
 rpc.connect()
 rpc.update(state="Main Menu",details="Insta Stalker 2.0",large_image="instagramicon",large_text="Discord.Link/200IQ",start=time.time())
 def logo():
-	menu = Fore.YELLOW +                         """                 Discord.Link/200IQ
+	menu = Fore.RED +  Fore.MAGENTA +                       """                 Discord.Link/200IQ
                                                     ╔════════════════════════════════════════════╗
                                                                     Insta Stalker v2.0
                                                     ╚════════════════════════════════════════════╝
 """
 	print(menu) 
 logo()
-animation = "[/-\\"
+animation = "%-\\"
 for i in range(20):
     time.sleep(0.1)
     sys.stdout.write("\r" + animation[i % len(animation)])
     sys.stdout.flush()
+sleep(1)
+os.system('cls')
+logo()
+os.system('title Type Username to Boost:')
 Username = input(Fore.WHITE +  ' [' + Fore.GREEN +'$' + Fore.WHITE + ']' + Fore.WHITE + f' Username: ' + Fore.MAGENTA +'')
 options = webdriver.ChromeOptions()
 rpc.update(state=f"Boosting @ {Username}",details=f"Submited username..",large_image="instagramicon")
-options.add_experimental_option("excludeSwitches", ["enable-logging"]) # Prevents console messages, only important Errors will be printed. 
-options.add_argument('--disable-gpu') # necessary.
+options.add_experimental_option("excludeSwitches", ["enable-logging"]) # Prevents console messages, only important Errors will be printed. #
+options.add_argument('--disable-gpu') # necessary. #
 options.headless = True
 driver = webdriver.Chrome(options=options, executable_path="[DATA]/DrivingAutomatically.exe")
-
+# -------------------------------------------------------------------------- #
 # Main part of automation #
 def Instagram(StoryViews):
     os.system('title Insta Stalker ^| Loading...')
@@ -48,7 +51,7 @@ def Instagram(StoryViews):
          # Username Input
         driver.find_element_by_xpath('/html/body/main/div/div/div[4]/div[3]/div/div/form/button').click()              
          # Gonder " Submit "
-        os.system('title Insta Stalkert ^| Username submited!')
+        os.system('title Insta Stalker ^| Username submited!')
     except:
         print(Fore.WHITE +  '  [' + Fore.RED +'?' + Fore.WHITE + ']' + Fore.WHITE + f' xPath Needs Update / discord.link/200IQ')
         driver.refresh()
